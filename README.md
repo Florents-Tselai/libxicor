@@ -32,7 +32,7 @@ You can use the supplied `xicorcsv` program to explore
 the correlations between a target `Y` column (dependent variable)
 
 ```
-Usage: ./runxicor <csv_file> <column_name(Y)> <n_lines>
+Usage: ./xicorcsv <csv_file> <column_name(Y)> <n_lines>
 ```
 
 Assuming the following `small.csv` file 
@@ -49,7 +49,7 @@ x,y,z
 Running
 
 ```
- ./runxicor small.csv Y 5 
+ ./xicorcsv small.csv Y 5 
 ```
 
 Will output 
