@@ -23,39 +23,3 @@ can be found in `xicor_example.c`:
 ```bash
 gcc xicor_example.c -O3 -Wall xicor.c -I. -lm -o xicor_example
 ```
-
-### Explore CSV
-
-Suppose you have a CSV file and you want to explore the correlation between its columns. 
-
-You can use the supplied `xicorcsv` program to explore
-the correlations between a target `Y` column (dependent variable)
-
-```
-Usage: ./xicorcsv <csv_file> <column_name(Y)> <n_lines>
-```
-
-Assuming the following `small.csv` file 
-
-```
-x,y,z
-1.0,1.0,3.0
--5.0,25.0,5.3
-2,4,4.6
-6,36,7.8
--1,1,3.99999
-```
-
-Running
-
-```
- ./xicorcsv small.csv Y 5 
-```
-
-Will output 
-```
-Computing XICOR scores for first 5 rows of column 'Y'...
-
-XICOR(X, Y): 0.1250000000 (Elapsed time: 0.000002 seconds)
-XICOR(Z, Y): 0.5000000000 (Elapsed time: 0.000001 seconds)
-```

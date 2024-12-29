@@ -6,11 +6,8 @@ CC = gcc
 xicor-example: xicor_example.c xicor.c
 	$(CC) $^ -O3 -Wall -I. -lm -L. -o $@
 
-xicorcsv: xicorcsv.c xicor.c
-	$(CC) $^ -O3 -Wall -I. -lm -L. -o $@
-
-all: xicor.o xicor-example xicorcsv
+all: xicor.o xicor-example
 
 clean:
 	@rm *.o
-	@rm xicor-example xicorcsv
+	@rm xicor-example
